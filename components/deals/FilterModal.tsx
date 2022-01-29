@@ -24,7 +24,7 @@ interface Props {
   onClose: () => void
 }
 
-export const DealsModal: FC<Props> = ({ isOpen, onClose }) => {
+export const FilterModal: FC<Props> = ({ isOpen, onClose }) => {
   const format = (val: any) => `£` + val
   const parse = (val: any) => val.replace(/^\$/, '')
 

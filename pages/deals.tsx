@@ -11,7 +11,7 @@ import {
 import { ArrowBackIcon, ArrowForwardIcon } from '@chakra-ui/icons'
 import 'react-datepicker/dist/react-datepicker.css'
 import DealsTable from '../components/deals'
-import { DealsModal } from '../components/deals/DealsModal'
+import { FilterModal } from '../components/deals/FilterModal'
 
 export const Deals: FC = () => {
   const { isOpen, onOpen, onClose } = useDisclosure()
@@ -22,7 +22,7 @@ export const Deals: FC = () => {
       bg={'gray.100'}
       padding={2}
       rounded={12}
-      boxShadow={'3px 3px 3px #888888'}
+      boxShadow={'3px 3px 3px 3px #888888'}
     >
       <Flex mb={6}>
         <Input
@@ -52,7 +52,7 @@ export const Deals: FC = () => {
       </Flex>
 
       <DealsTable />
-      <DealsModal isOpen={isOpen} onClose={onClose} />
+      <FilterModal isOpen={isOpen} onClose={onClose} />
 
       <Flex justifyContent={'center'} mt={4} mb={2}>
         <Tag boxShadow={'2px 2px 2px 2px #888888'} bg={'white'}>

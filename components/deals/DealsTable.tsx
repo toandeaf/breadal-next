@@ -40,9 +40,11 @@ export const DealsTable = () => {
       size={isMobile ? 'sm' : 'lg'}
       height={'1%'}
       bg={'white'}
-      borderColor={'rgb(118,58,199)'}
+      borderWidth={'4px'}
+      borderStyle={'solid'}
+      borderColor={'white'}
       variant={'striped'}
-      boxShadow={'3px 3px 3px 3px #888888'}
+      // boxShadow={'3px 3px 3px 3px #888888'}
       colorScheme={'gray'}
     >
       <Thead rounded={6}>

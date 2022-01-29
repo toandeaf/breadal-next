@@ -11,7 +11,7 @@ import {
   NumberInputField,
   Select,
 } from '@chakra-ui/react'
-import BalloonSlider from '../components/newQuote/BalloonSlider'
+import BalloonSlider from '../components/quote/BalloonSlider'
 
 export const NewQuote: FC = () => {
   return (

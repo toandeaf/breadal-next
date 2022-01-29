@@ -40,7 +40,12 @@ export const AppDrawer: FC<Props> = ({ isOpen, onClose }) => {
             <Divider borderColor={'gray.400'} />
 
             <ListItem>
-              <Link href={'/newQuote'}>New Quote</Link>
+              <Link href={'/quickQuote'}>Quick Quote</Link>
+            </ListItem>
+            <Divider borderColor={'gray.400'} />
+
+            <ListItem>
+              <Link href={'/fullQuote'}>Full Quote</Link>
             </ListItem>
             <Divider borderColor={'gray.400'} />
 
@@ -48,6 +53,10 @@ export const AppDrawer: FC<Props> = ({ isOpen, onClose }) => {
               <Link href={'/contact'}>Contact Only</Link>
             </ListItem>
             <Divider borderColor={'gray.400'} />
+
+            <ListItem>
+              <Link href={'/settings'}>Settings</Link>
+            </ListItem>
           </List>
         </DrawerBody>
         <DrawerFooter>
