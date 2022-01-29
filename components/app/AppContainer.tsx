@@ -1,12 +1,13 @@
-import { FC } from 'react'
+import { FC, ReactElement } from 'react'
 import { Flex } from '@chakra-ui/react'
 
 interface Props {
-  children: JSX.Element
+  isMobile: boolean
+  children: Array<ReactElement>
 }
-export const AppContainer: FC<Props> = ({ children }) => {
+export const AppContainer: FC<Props> = ({ isMobile, children }) => {
   return (
-    <Flex height={'80vh'} direction={'column'}>
+    <Flex height={isMobile ? '90vh' : '93vh'} direction={'column'}>
       {children}
     </Flex>
   )

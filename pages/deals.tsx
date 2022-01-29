@@ -17,30 +17,55 @@ export const Deals: FC = () => {
   const { isOpen, onOpen, onClose } = useDisclosure()
 
   return (
-    <Flex direction={'column'} justifyContent={'space-around'} padding={2}>
-      <Flex>
-        <Input type={'text'} placeholder={'Search...'} mr={2} />
-        <Button onClick={onOpen} mr={2}>
+    <Flex
+      direction={'column'}
+      bg={'gray.100'}
+      padding={2}
+      rounded={12}
+      boxShadow={'3px 3px 3px #888888'}
+    >
+      <Flex mb={6}>
+        <Input
+          type={'text'}
+          placeholder={'Search...'}
+          mr={2}
+          boxShadow={'2px 2px 2px #888888'}
+          bg={'white'}
+        />
+        <Button
+          onClick={onOpen}
+          mr={2}
+          boxShadow={'1px 1px 1px 1px #888888'}
+          bg={'rgb(118,58,199)'}
+          color={'white'}
+        >
           Apply
         </Button>
-        <Button onClick={onOpen}>Filter</Button>
+        <Button
+          onClick={onOpen}
+          boxShadow={'1px 1px 1px 1px #888888'}
+          bg={'rgb(118,58,199)'}
+          color={'white'}
+        >
+          Filter
+        </Button>
       </Flex>
 
       <DealsTable />
       <DealsModal isOpen={isOpen} onClose={onClose} />
 
-      <Flex justifyContent={'center'}>
-        <Tag>
+      <Flex justifyContent={'center'} mt={4} mb={2}>
+        <Tag boxShadow={'2px 2px 2px 2px #888888'} bg={'white'}>
           <IconButton
+            bg={'white'}
             aria-label={'back-button'}
             icon={<ArrowBackIcon />}
-            m={2}
           />
           <TagLabel>Page 1/4</TagLabel>
           <IconButton
+            bg={'white'}
             aria-label={'forward-button'}
             icon={<ArrowForwardIcon />}
-            m={2}
           />
         </Tag>
       </Flex>

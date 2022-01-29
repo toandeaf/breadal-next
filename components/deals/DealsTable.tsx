@@ -1,4 +1,5 @@
 import { Table, Tbody, Td, Thead, Tr } from '@chakra-ui/react'
+import { useEffect, useState } from 'react'
 
 interface Deal {
   id: string
@@ -18,22 +19,45 @@ export const DealsTable = () => {
   }
   const deals: Array<Deal> = []
   deals.push(deal, deal, deal, deal, deal, deal, deal)
+  const [width, setWidth] = useState<number>(0)
+
+  function handleWindowSizeChange() {
+    setWidth(window.innerWidth)
+  }
+  useEffect(() => {
+    setWidth(window.innerWidth)
+    window.addEventListener('resize', handleWindowSizeChange)
+    return () => {
+      window.removeEventListener('resize', handleWindowSizeChange)
+    }
+  }, [])
+
+  const isMobile = width <= 768
 
   return (
     <Table
-      bg={'teal.100'}
       rounded={12}
-      size={'md'}
+      size={isMobile ? 'sm' : 'lg'}
       height={'1%'}
+      bg={'white'}
+      borderColor={'rgb(118,58,199)'}
       variant={'striped'}
+      boxShadow={'3px 3px 3px 3px #888888'}
       colorScheme={'gray'}
     >
       <Thead rounded={6}>
-        <Tr>
+        <Tr fontWeight={'bold'}>
           <Td>Status</Td>
           <Td>Client Name</Td>
           <Td>Deal Value</Td>
           <Td>Created At</Td>
+          {!isMobile && (
+            <>
+              <Td>Extra Header 1</Td>
+              <Td>Extra Header 2</Td>
+              <Td>Extra Header 3</Td>
+            </>
+          )}
         </Tr>
       </Thead>
       <Tbody>
@@ -49,6 +73,13 @@ export const DealsTable = () => {
               {!deal.dealValue && `TBC`}
             </Td>
             <Td>{deal.createdAt}</Td>
+            {!isMobile && (
+              <>
+                <Td>Extra Value 1</Td>
+                <Td>Extra Value 2</Td>
+                <Td>Extra Value 3</Td>
+              </>
+            )}
           </Tr>
         ))}
       </Tbody>

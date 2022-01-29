@@ -14,9 +14,14 @@ import { CheckIcon, TimeIcon, WarningIcon } from '@chakra-ui/icons'
 
 const Home: NextPage = () => {
   return (
-    <Flex justifyContent={'center'} alignItems={'center'}>
-      <Flex bg={'gray.100'} direction={'column'} rounded={6} padding={12}>
-        <List spacing={5} pb={8}>
+    <Flex
+      rounded={12}
+      justifyContent={'center'}
+      alignItems={'center'}
+      boxShadow={'3px 3px 3px #888888'}
+    >
+      <Flex bg={'gray.100'} direction={'column'} rounded={12} padding={12}>
+        <List spacing={6} pb={8}>
           <ListItem>
             <ListIcon as={TimeIcon} />
             Deals Pending: 0

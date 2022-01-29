@@ -7,7 +7,7 @@ interface Props {
 
 export const AppBody: FC<Props> = ({ children }) => {
   return (
-    <Flex height={'93vh'} justifyContent={'center'}>
+    <Flex height={'93vh'} justifyContent={'center'} alignItems={'center'}>
       {children}
     </Flex>
   )
