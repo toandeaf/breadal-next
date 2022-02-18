@@ -4,7 +4,6 @@ import {
   Button,
   Flex,
   FormControl,
-  FormHelperText,
   FormLabel,
   Input,
   NumberInput,
@@ -28,8 +27,6 @@ export const NewQuote: FC = () => {
           <FormLabel>Asset Cost exc. Vat</FormLabel>
           <NumberInput
             bg={'white'}
-            id="email"
-            type="number"
             min={0}
             max={1000000000}
             precision={2}
@@ -43,7 +40,6 @@ export const NewQuote: FC = () => {
           <NumberInput
             bg={'white'}
             id="email"
-            type="number"
             min={0}
             max={1000000000}
             precision={2}
@@ -57,7 +53,6 @@ export const NewQuote: FC = () => {
           <NumberInput
             bg={'white'}
             id="email"
-            type="number"
             min={0}
             max={1000000000}
             precision={2}
